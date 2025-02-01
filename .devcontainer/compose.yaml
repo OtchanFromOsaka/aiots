@@ -1,0 +1,30 @@
+version: "3"
+name: "aiots"
+volumes:
+  aiots-dummy:
+services:
+  node:
+    container_name: node
+    build:
+      context: .
+      dockerfile: ./node.dockerfile
+    ports:
+      - 3001:3000
+      - 4001:4000
+      - 5001:5000
+      - 9324:9323
+    volumes:
+      - ../:/home/aiots/dev
+      - ./bin/aiots-root:/sbin/aiots-root
+      - ./bin/aiots:/usr/local/bin/aiots
+      - aiots-dummy:/home/aiots/dev/.pnpm-store
+      - aiots-dummy:/home/aiots/dev/node_modules
+    tty: true
+    deploy:
+      resources:
+        limits:
+          cpus: "4.0"
+          memory: 8G
+        reservations:
+          cpus: "2.0"
+          memory: 4G

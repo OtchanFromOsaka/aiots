@@ -1,0 +1,31 @@
+#!/bin/bash
+
+start_time=`date +%s`
+
+if [ $# -ne 1 ]; then
+  echo "please add option \"setup\" or \"update\"."
+  exit 1
+fi
+
+if [ $1 != "setup" ] && [ $1 != "update" ]; then
+  echo "please add option \"setup\" or \"update\"."
+  exit 1
+fi
+
+if [ $1 = "setup" ]; then
+  chown -R aiots:aiots /home/aiots/dev
+  chown -R aiots:aiots /usr/local/bin/aiots
+  chmod 744 /sbin/aiots-root
+  chmod 744 /usr/local/bin/aiots
+  pnpm exec playwright install --with-deps
+fi
+
+if [ $1 = "update" ]; then
+  n 22
+  pnpm self-update 9
+  pnpm exec playwright install --with-deps
+fi
+
+end_time=`date +%s`
+time=$((end_time - start_time))
+echo "Done in $time sec"

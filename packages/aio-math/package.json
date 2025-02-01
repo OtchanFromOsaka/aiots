@@ -1,0 +1,14 @@
+{
+	"name": "@aiots/aio-math",
+	"type": "module",
+	"scripts": {
+		"biome": "biome lint --write && biome format --write",
+		"test": "vitest run"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@types/node": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	}
+}

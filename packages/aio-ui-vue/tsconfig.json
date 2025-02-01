@@ -1,0 +1,10 @@
+{
+	"extends": "../../settings/tsconfig.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"lib": ["DOM", "ESNext"],
+		"outDir": "dist",
+		"declaration": true
+	},
+	"include": ["src/**/*", "tests/**/*", "types/**/*", "index.ts"]
+}

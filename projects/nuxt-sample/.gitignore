@@ -1,0 +1,9 @@
+.output/
+.data/
+.nuxt/
+.nitro/
+.cache/
+
+dist/
+tests/e2e/results/
+playwright-report/

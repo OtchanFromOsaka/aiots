@@ -1,0 +1,20 @@
+{
+	"name": "aiots",
+	"license": "MIT",
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"build": "pnpm install && pnpm -F \"aio-ui-vue\" build",
+		"aio-http": "pnpm -F \"aio-http\"",
+		"aio-date": "pnpm -F \"aio-date\"",
+		"aio-math": "pnpm -F \"aio-math\"",
+		"aio-ui-vue": "pnpm -F \"aio-ui-vue\"",
+		"nuxt-sample": "pnpm -F \"nuxt-sample\""
+	},
+	"engines": {
+		"node": ">=22",
+		"pnpm": ">=9",
+		"npm": "please use pnpm",
+		"yarn": "please use pnpm"
+	}
+}
