@@ -43,3 +43,7 @@ aiots-root update
 docker exec -it node bash
 aiots update
 ```
+
+## Branch Management
+
+see [Branch Management](./docs/branch-management.md)
