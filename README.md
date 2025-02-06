@@ -1,6 +1,6 @@
-# aiots
+# AIO.ts
 
-All-in-one Monorepo by TypeScript
+All-in-one TS Monorepo
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ docker compose up -d
     - see `./.devcontainer/bin/aiots-root` for `aiots-root` command details
 
 ```bash
-docker exec -it -u root node bash
+docker exec -it -u root debian bash
 aiots-root setup
 ```
 
@@ -23,7 +23,7 @@ aiots-root setup
     - see `./.devcontainer/bin/aiots` for `aiots` command details
 
 ```bash
-docker exec -it node bash
+docker exec -it debian bash
 aiots setup
 ```
 
@@ -37,10 +37,10 @@ pnpm nuxt-sample dev
 
 ```bash
 # after starting the container
-docker exec -it -u root node bash
+docker exec -it -u root debian bash
 aiots-root update
 # Ctrl + D for exit container
-docker exec -it node bash
+docker exec -it debian bash
 aiots update
 ```
 
