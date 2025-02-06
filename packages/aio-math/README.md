@@ -1,22 +1,57 @@
-# aio-math
+## aio-math
 
-## 設定
+### General Usage
+
+- Add to your code
+
+```ts
+import math from "path/to/package/aio-math"
+
+const nearlyPi = math.flexibleRound(3.14159, 2)
+console.log(nearlyPi) // 3.14
+```
+
+- You can also import functions individually
+
+```ts
+import { flexibleRound } from "path/to/package/aio-math"
+
+const nearlyPi = flexibleRound(3.14159, 2)
+console.log(nearlyPi) // 3.14
+```
+
+### Vite
+
+- Set relative paths in `tsconfig.json`
 
 ```JSON
-// tsconfig.json
 {
   "compilerOptions": {
     "paths": {
-      "aio-math": ["../../packages/aio-math"]
+      "aio-math": ["path/to/package/aio-math"]
     }
   }
 }
 ```
 
-```TypeScript
-// 丸ごとインポートする場合
-import math from "aio-math"
+- Also set relative paths in `vite.config.ts`
 
-// 一部のみインポートする場合
-import { addDay } from "aio-math"
+```ts
+import { resolve } from "node:path";
+
+export default defineConfig({
+  // ...
+  resolve: {
+    alias: {
+      "aio-math": resolve(__dirname, "path/to/package/aio-math"),
+    },
+  },
+  // ...
+});
+```
+
+- Easy to add to your code
+
+```ts
+import math from "aio-math"
 ```
