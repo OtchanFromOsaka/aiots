@@ -1,6 +1,6 @@
 {
   "name": "aiots",
   "dockerComposeFile": "./compose.yaml",
-  "service": "node",
+  "service": "debian",
   "workspaceFolder": "/home/aiots/dev"
 }

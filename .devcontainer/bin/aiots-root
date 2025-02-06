@@ -17,13 +17,14 @@ if [ $1 = "setup" ]; then
   chown -R aiots:aiots /usr/local/bin/aiots
   chmod 744 /sbin/aiots-root
   chmod 744 /usr/local/bin/aiots
-  pnpm exec playwright install --with-deps
+  n 22
+  pnpm exec playwright install-deps
 fi
 
 if [ $1 = "update" ]; then
   n 22
-  pnpm self-update 9
-  pnpm exec playwright install --with-deps
+  pnpm self-update
+  pnpm exec playwright install-deps
 fi
 
 end_time=`date +%s`

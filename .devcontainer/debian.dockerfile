@@ -1,7 +1,8 @@
-FROM node:22-bullseye
+FROM debian:bookworm-slim
 
 ENV TZ=Asia/Tokyo
 
+RUN apt-get update && apt-get install -y nodejs npm curl
 RUN npm install -g n
 RUN npm install -g pnpm
 RUN npm install -g @playwright/test

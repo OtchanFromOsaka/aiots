@@ -1,24 +1,27 @@
 version: "3"
 name: "aiots"
 volumes:
-  aiots-dummy:
+  dummy:
 services:
-  node:
-    container_name: node
+  debian:
+    container_name: debian
     build:
       context: .
-      dockerfile: ./node.dockerfile
+      dockerfile: ./debian.dockerfile
     ports:
-      - 3001:3000
-      - 4001:4000
-      - 5001:5000
-      - 9324:9323
+      - 3000:3000
+      - 3001:3001
+      - 4000:4000
+      - 4001:4001
+      - 5000:5000
+      - 5001:5001
+      - 9323:9323
     volumes:
       - ../:/home/aiots/dev
       - ./bin/aiots-root:/sbin/aiots-root
       - ./bin/aiots:/usr/local/bin/aiots
-      - aiots-dummy:/home/aiots/dev/.pnpm-store
-      - aiots-dummy:/home/aiots/dev/node_modules
+      - dummy:/home/aiots/dev/.pnpm-store
+      - dummy:/home/aiots/dev/node_modules
     tty: true
     deploy:
       resources:
