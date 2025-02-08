@@ -24,6 +24,7 @@ if [ $1 = "update" ]; then
   pnpm up
   pnpm install
   pnpm exec playwright install
+  pnpm -F "aio-ui-vue" build
 fi
 
 end_time=`date +%s`
