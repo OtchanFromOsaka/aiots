@@ -1,6 +1,6 @@
 import type { Plugin } from "vue";
 
-import MyButton from "./src/MyButton.vue";
+import MyButton from "./src/components/MyButton.vue";
 
 function createMyUi(): Plugin {
 	return {
