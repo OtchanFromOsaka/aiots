@@ -9,6 +9,5 @@ const count = ref(0);
 <template>
 	<h1>Index</h1>
 	<p>count: {{ count }}</p>
-	<base-button @click="count++">increment</base-button>
-	<my-button>test</my-button>
+	<my-button @click="count++">increment</my-button>
 </template>
