@@ -16,8 +16,6 @@
 		"@nuxt/test-utils": "catalog:",
 		"@playwright/test": "catalog:",
 		"@types/node": "catalog:",
-		"@vue/test-utils": "catalog:",
-		"happy-dom": "catalog:",
 		"nuxt": "catalog:",
 		"vitest": "catalog:",
 		"vue": "catalog:",
