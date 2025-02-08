@@ -17,6 +17,7 @@ cd /home/aiots/dev
 if [ $1 = "setup" ]; then
   pnpm install
   pnpm exec playwright install
+  pnpm -F "aio-ui-vue" build
 fi
 
 if [ $1 = "update" ]; then

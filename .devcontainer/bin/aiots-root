@@ -17,11 +17,22 @@ if [ $1 = "setup" ]; then
   chown -R aiots:aiots /usr/local/bin/aiots
   chmod 744 /sbin/aiots-root
   chmod 744 /usr/local/bin/aiots
+  apt-get update -y
+  apt-get install -y curl
+  apt-get install -y npm
+  npm install -g pnpm
+  npm install -g n
+  npm install -g @playwright/test
   n 22
   pnpm exec playwright install-deps
 fi
 
 if [ $1 = "update" ]; then
+  apt-get update -y
+  apt-get upgrade -y
+  apt-get full-upgrade -y
+  apt-get autoremove -y
+  apt-get autoclean -y
   n 22
   pnpm self-update
   pnpm exec playwright install-deps

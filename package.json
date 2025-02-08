@@ -4,7 +4,6 @@
 	"version": "0.1.0",
 	"type": "module",
 	"scripts": {
-		"build": "pnpm install && pnpm -F \"aio-ui-vue\" build",
 		"aio-http": "pnpm -F \"aio-http\"",
 		"aio-date": "pnpm -F \"aio-date\"",
 		"aio-math": "pnpm -F \"aio-math\"",

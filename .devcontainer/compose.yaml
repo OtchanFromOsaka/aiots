@@ -3,11 +3,11 @@ name: "aiots"
 volumes:
   dummy:
 services:
-  debian:
-    container_name: debian
+  aiots:
+    container_name: aiots
     build:
       context: .
-      dockerfile: ./debian.dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - 3000:3000
       - 3001:3001

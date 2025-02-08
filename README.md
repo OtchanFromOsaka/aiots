@@ -4,46 +4,48 @@ All-in-one TS Monorepo
 
 ## Getting Started
 
-- create container
+Create the container.
 
 ```bash
 cd ./.devcontainer
 docker compose up -d
 ```
 
-- setup as root user
-    - see `./.devcontainer/bin/aiots-root` for `aiots-root` command details
+Set up as the root user. See [aiots-root](./.devcontainer/bin/aiots-root) for `aiots-root` command details.
 
 ```bash
-docker exec -it -u root debian bash
+docker exec -it -u root aiots bash
 aiots-root setup
 ```
 
-- Ctrl + D for exit container, and setup as default user
-    - see `./.devcontainer/bin/aiots` for `aiots` command details
+Press Ctrl + D for exit container, and set up as the default user. See [aiots](./.devcontainer/bin/aiots) for `aiots` command details.
 
 ```bash
-docker exec -it debian bash
+docker exec -it aiots bash
 aiots setup
 ```
 
-- let's start a dev server
+Let's start a dev server.
 
 ```bash
 pnpm nuxt-sample dev
 ```
 
+Access [http://localhost:3000](http://localhost:3000) with a browser.
+
 ## Daily Update Work
+
+The philosophy of this repository is to keep all dependencies up to date. However, for Node.js, i specify version 22 because it is the LTS version and we are waiting for AWS Lambda to support it.
 
 ```bash
 # after starting the container
-docker exec -it -u root debian bash
+docker exec -it -u root aiots bash
 aiots-root update
-# Ctrl + D for exit container
-docker exec -it debian bash
+# after pressing Ctrl + D to exit the container
+docker exec -it aiots bash
 aiots update
 ```
 
 ## Branch Management
 
-see [Branch Management](./docs/branch-management.md)
+See [Branch Management](./docs/branch-management.md) for details.
