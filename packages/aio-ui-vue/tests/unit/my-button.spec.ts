@@ -19,6 +19,11 @@ describe("MyButton", () => {
 		expect(wrapper.emitted("click")).toBeTruthy();
 	});
 
+	it("renders the button type correctly when passed type props", async () => {
+		await wrapper.setProps({ type: "submit" });
+		expect(wrapper.attributes("type")).toBe("submit");
+	});
+
 	it("renders the text color correctly when passed color props", async () => {
 		await wrapper.setProps({ color: "#ff0000" });
 		expect(wrapper.element.style.color).toBe("#ff0000");
