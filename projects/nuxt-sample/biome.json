@@ -10,6 +10,6 @@
 			"**/*.tsx",
 			"**/*.vue"
 		],
-		"ignore": [".nuxt/**", ".output/**", "node_modules/**", "**/*.d.ts"]
+		"ignore": [".nuxt/**", ".output/**", "node_modules/**", "nuxt-env.d.ts"]
 	}
 }

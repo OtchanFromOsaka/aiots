@@ -8,6 +8,6 @@ export default defineVitestConfig({
 				domEnvironment: "happy-dom",
 			},
 		},
-		include: ["tests/**/*"],
+		include: ["tests/unit/**/*"],
 	},
 });
