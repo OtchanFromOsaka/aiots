@@ -1,13 +1,7 @@
 import type { FC } from "hono/jsx";
-import { css, cx, keyframes, Style } from "hono/css";
+import { css, Style } from "hono/css";
 
-const globalClass = css`
-	html {
-		font-family: Arial, Helvetica, sans-serif;
-		color: #efefef;
-		background-color: #1f1f1f;
-	}
-`;
+import { globalStyles } from "./global-styles";
 
 export const BaseLayout: FC = (props) => {
 	return (
@@ -15,7 +9,7 @@ export const BaseLayout: FC = (props) => {
 			<head>
 				<meta charSet="utf-8" />
 				<title>hono-sample | AIO.ts</title>
-				<Style>{globalClass}</Style>
+				<Style>{globalStyles}</Style>
 			</head>
 			<body>{props.children}</body>
 		</html>
