@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 
 import index from "@/routes/index";
-import apiV1Test from "@/routes/api/v1/test";
+import apiRouter from "@/routes/api/router";
 
 const origin = process.env.ORIGIN;
 const allowHeaders = process.env.HEADERS;
@@ -22,7 +22,7 @@ const app = new Hono<Env>()
 			credentials: true,
 		}),
 	)
-	.route("/", index)
-	.route("/api/v1/test", apiV1Test);
+	.route("/", apiRouter)
+	.route("/", index);
 
 export default app;
