@@ -8,6 +8,7 @@
 		"aio-date": "pnpm -F \"aio-date\"",
 		"aio-math": "pnpm -F \"aio-math\"",
 		"aio-ui-vue": "pnpm -F \"aio-ui-vue\"",
+		"aio-validation": "pnpm -F \"aio-validation\"",
 		"nuxt-sample": "pnpm -F \"nuxt-sample\""
 	},
 	"engines": {
