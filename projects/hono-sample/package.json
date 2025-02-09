@@ -1,0 +1,25 @@
+{
+	"name": "@aiots/hono-sample",
+	"version": "0.1.0",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"biome": "biome lint --write && biome format --write",
+		"test": "vitest run",
+		"e2e": "playwright test"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@hono/vite-dev-server": "catalog:",
+		"@hono/zod-validator": "catalog:",
+		"@playwright/test": "catalog:",
+		"@types/node": "catalog:",
+		"hono": "catalog:",
+		"vite": "catalog:",
+		"vitest": "catalog:",
+		"zod": "catalog:"
+	}
+}

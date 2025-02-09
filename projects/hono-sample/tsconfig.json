@@ -1,0 +1,21 @@
+{
+	"extends": "../../settings/tsconfig.json",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx",
+		"baseUrl": ".",
+		"lib": ["DOM", "ESNext"],
+		"outDir": "dist",
+		"declaration": true,
+		"paths": {
+			"@/*": ["src/*"]
+		}
+	},
+	"include": [
+		"src/**/*",
+		"tests/**/*",
+		"types/**/*",
+		"vite.config.ts",
+		"vitest.config.ts"
+	]
+}
