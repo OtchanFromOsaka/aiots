@@ -3,15 +3,16 @@ import { mountSuspended } from "@nuxt/test-utils/runtime";
 
 import CountUpper from "@/components/CountUpper.vue";
 
-describe("CountUpper", () => {
+describe("CountUpper", async () => {
+	const wrapper = await mountSuspended(CountUpper);
+	const p = wrapper.find('[data-test="count"]');
+
 	it("should render the component", async () => {
-		const wrapper = await mountSuspended(CountUpper);
-		expect(wrapper.find('[data-test="count"]').text()).toBe(0);
+		expect(p.text()).toBe("Count: 0");
 	});
 
 	it("should increment the count", async () => {
-		const wrapper = await mountSuspended(CountUpper);
 		await wrapper.find("button").trigger("click");
-		expect(wrapper.html()).toContain("Count: 1");
+		expect(p.text()).toBe("Count: 1");
 	});
 });
