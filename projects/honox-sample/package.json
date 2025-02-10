@@ -1,0 +1,22 @@
+{
+	"name": "@aiots/honox-sample",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build --mode client && vite build --mode server",
+		"biome": "biome lint --write && biome format --write",
+		"test": "vitest run",
+		"e2e": "playwright test"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@hono/node-server": "catalog:",
+		"@hono/vite-build": "catalog:",
+		"@hono/vite-dev-server": "catalog:",
+		"@playwright/test": "catalog:",
+		"hono": "catalog:",
+		"honox": "catalog:",
+		"vite": "catalog:",
+		"vitest": "catalog:"
+	}
+}

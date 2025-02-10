@@ -1,0 +1,23 @@
+{
+	"extends": "../../settings/tsconfig.json",
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"strict": true,
+		"skipLibCheck": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx",
+		"baseUrl": ".",
+		"lib": ["ESNext", "DOM"],
+		"paths": {
+			"@/*": ["app/*"]
+		}
+	},
+	"include": [
+		"app/**/*",
+		"vite-node-server-plugin.ts",
+		"vite.config.ts",
+		"vitest.config.ts"
+	]
+}
