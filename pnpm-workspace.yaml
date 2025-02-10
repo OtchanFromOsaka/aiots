@@ -4,6 +4,8 @@ packages:
 
 catalog:
   "@biomejs/biome": latest
+  "@hono/node-server": latest
+  "@hono/vite-build": latest
   "@hono/vite-dev-server": latest
   "@hono/zod-validator": latest
   "@nuxt/test-utils": latest
@@ -19,6 +21,7 @@ catalog:
   autoprefixer: latest
   happy-dom: latest
   hono: latest
+  honox: latest
   next: latest
   nuxt: latest
   postcss: latest
