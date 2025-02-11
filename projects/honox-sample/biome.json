@@ -11,10 +11,6 @@
 			"**/*.jsx",
 			"**/*.tsx"
 		],
-		"ignore": [
-			"node_modules/**",
-			"dist/**",
-			"app/global.d.ts"
-		]
+		"ignore": ["node_modules/**", "dist/**", "app/global.d.ts"]
 	}
 }

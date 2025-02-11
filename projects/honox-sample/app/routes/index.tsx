@@ -3,7 +3,7 @@ import { createRoute } from "honox/factory";
 import Counter from "@/islands/counter";
 
 const className = css`
-  font-family: sans-serif;
+	font-family: sans-serif;
 `;
 
 export default createRoute((c) => {
