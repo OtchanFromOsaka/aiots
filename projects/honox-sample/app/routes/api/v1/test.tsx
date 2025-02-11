@@ -1,9 +1,6 @@
-import { setTimeout } from "node:timers/promises";
-
 import { Hono } from "hono";
 
-const route = new Hono().get("/", async (c) => {
-	await setTimeout(1000);
+const route = new Hono().get("/", (c) => {
 	return c.json({ message: "Hello, world!" });
 });
 

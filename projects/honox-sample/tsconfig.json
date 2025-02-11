@@ -8,15 +8,17 @@
 		"skipLibCheck": true,
 		"jsx": "react-jsx",
 		"jsxImportSource": "hono/jsx",
-		"baseUrl": ".",
 		"lib": ["ESNext", "DOM"],
+		"types": ["vite/client"],
+		"baseUrl": ".",
 		"paths": {
 			"@/*": ["app/*"]
 		}
 	},
 	"include": [
 		"app/**/*",
-		"vite-node-server-plugin.ts",
+		"load.ts",
+		"vite-plugin.ts",
 		"vite.config.ts",
 		"vitest.config.ts"
 	]

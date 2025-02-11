@@ -1,10 +1,10 @@
 import { fileURLToPath, URL } from "node:url";
 
 import { defineConfig } from "vite";
-import client from "honox/vite/client";
 import honox from "honox/vite";
+import client from "honox/vite/client";
 
-import nodeServerPlugin from "./vite-node-server-plugin";
+import { nodeServer } from "./vite-plugin";
 
 const resolve = {
 	alias: {
@@ -12,31 +12,33 @@ const resolve = {
 	},
 };
 
+const server = {
+	port: 3000,
+	host: true,
+	watch: {
+		usePolling: true,
+	},
+};
+
 export default defineConfig(({ mode }) => {
-	if (mode === "development") {
-		return {
-			plugins: [honox()],
-			resolve,
-			server: {
-				port: 3000,
-				host: true,
-				watch: {
-					usePolling: true,
-				},
-			},
-		};
+	switch (mode) {
+		case "development":
+			return {
+				plugins: [honox()],
+				resolve,
+				server,
+			};
+		case "client":
+			return {
+				plugins: [client()],
+				resolve,
+			};
+		case "server":
+			return {
+				plugins: [honox(), nodeServer()],
+				resolve,
+			};
+		default:
+			throw new Error(`Unknown mode: ${mode}`);
 	}
-	if (mode === "client") {
-		return {
-			plugins: [client()],
-			resolve,
-		};
-	}
-	if (mode === "server") {
-		return {
-			plugins: [honox(), nodeServerPlugin()],
-			resolve,
-		};
-	}
-	throw new Error(`Unknown mode: ${mode}`);
 });

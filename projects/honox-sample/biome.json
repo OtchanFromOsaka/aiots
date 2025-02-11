@@ -14,8 +14,7 @@
 		"ignore": [
 			"node_modules/**",
 			"dist/**",
-			"app/global.d.ts",
-			"app/vite-env.d.ts"
+			"app/global.d.ts"
 		]
 	}
 }
