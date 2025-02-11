@@ -23,6 +23,7 @@ export function nodeServer(): Plugin {
 
 				const worker = new Hono();
 				worker.use("/static/*", serveStatic({ root: "./dist" }));
+				worker.use("/favicon.ico", serveStatic({ root: "./dist" }));
 
 				const modules = import.meta.glob(["/app/server.ts"], {
 					import: "default",
