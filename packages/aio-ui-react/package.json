@@ -1,0 +1,22 @@
+{
+  "name": "@aiots/aio-ui-react",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+		"biome": "biome lint --write && biome format --write",
+		"test": "vitest run"
+  },
+  "devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react-swc": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+		"vitest": "catalog:"
+  }
+}
