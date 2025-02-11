@@ -7,6 +7,7 @@
 		"aio-http": "pnpm -F \"aio-http\"",
 		"aio-date": "pnpm -F \"aio-date\"",
 		"aio-math": "pnpm -F \"aio-math\"",
+		"aio-ui-react": "pnpm -F \"aio-ui-react\"",
 		"aio-ui-vue": "pnpm -F \"aio-ui-vue\"",
 		"aio-validation": "pnpm -F \"aio-validation\"",
 		"hono-sample": "pnpm -F \"hono-sample\"",

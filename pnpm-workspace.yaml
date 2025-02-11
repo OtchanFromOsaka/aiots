@@ -15,7 +15,7 @@ catalog:
   "@types/node": latest
   "@types/react": latest
   "@types/react-dom": latest
-  "@vitejs/plugin-react": latest
+  "@vitejs/plugin-react-swc": latest
   "@vitejs/plugin-vue": latest
   "@vue/test-utils": latest
   autoprefixer: latest
