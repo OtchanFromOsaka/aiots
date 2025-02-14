@@ -10,6 +10,10 @@ catalog:
   "@hono/zod-validator": latest
   "@nuxt/test-utils": latest
   "@playwright/test": latest
+  "@react-router/dev": latest
+  "@react-router/node": latest
+  "@react-router/serve": latest
+  "@tailwindcss/vite": latest
   "@testing-library/jest-dom": latest
   "@testing-library/react": latest
   "@types/node": latest
@@ -22,13 +26,12 @@ catalog:
   happy-dom: latest
   hono: latest
   honox: latest
-  next: latest
+  isbot: latest
   nuxt: latest
-  postcss: latest
-  postcss-load-config: latest
   react: latest
   react-dom: latest
   react-router: latest
+  react-router-devtools: latest
   react-router-dom: latest
   tailwindcss: latest
   typescript: latest
