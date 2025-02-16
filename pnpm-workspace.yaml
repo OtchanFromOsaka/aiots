@@ -10,33 +10,22 @@ catalog:
   "@hono/zod-validator": latest
   "@nuxt/test-utils": latest
   "@playwright/test": latest
-  "@react-router/dev": latest
-  "@react-router/node": latest
-  "@react-router/serve": latest
-  "@tailwindcss/vite": latest
-  "@testing-library/jest-dom": latest
-  "@testing-library/react": latest
   "@types/node": latest
   "@types/react": latest
   "@types/react-dom": latest
   "@vitejs/plugin-react-swc": latest
   "@vitejs/plugin-vue": latest
   "@vue/test-utils": latest
-  autoprefixer: latest
   happy-dom: latest
   hono: latest
   honox: latest
-  isbot: latest
   nuxt: latest
   react: latest
   react-dom: latest
-  react-router: latest
-  react-router-devtools: latest
   react-router-dom: latest
-  tailwindcss: latest
+  styled-components: latest
   typescript: latest
   vite: latest
-  vite-tsconfig-paths: latest
   vitest: latest
   vue: latest
   vue-router: latest
