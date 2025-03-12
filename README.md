@@ -11,17 +11,23 @@ cd ./.devcontainer
 docker compose up -d
 ```
 
-Set up as the root user. See [aiots-root](./.devcontainer/bin/aiots-root) for `aiots-root` command details.
+Set up as the root user. See [root](./.devcontainer/bin/root) for `root` command details.
 
 ```bash
-docker exec -it -u root aiots bash
-aiots-root setup
+docker exec -it -u root aiots-app bash
 ```
 
-Press Ctrl + D for exit container, and set up as the default user. See [aiots](./.devcontainer/bin/aiots) for `aiots` command details.
+```bash
+root setup
+```
+
+**Press Ctrl + D** for exit container, and set up as the default user. See [aiots](./.devcontainer/bin/aiots) for `aiots` command details.
 
 ```bash
-docker exec -it aiots bash
+docker exec -it aiots-app bash
+```
+
+```bash
 aiots setup
 ```
 
@@ -39,10 +45,10 @@ The philosophy of this repository is to keep all dependencies up to date. Howeve
 
 ```bash
 # after starting the container
-docker exec -it -u root aiots bash
-aiots-root update
+docker exec -it -u root aiots-app bash
+root update
 # after pressing Ctrl + D to exit the container
-docker exec -it aiots bash
+docker exec -it aiots-app bash
 aiots update
 ```
 

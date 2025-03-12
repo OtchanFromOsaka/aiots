@@ -3,22 +3,18 @@ name: "aiots"
 volumes:
   dummy:
 services:
-  aiots:
-    container_name: aiots
+  app:
+    container_name: aiots-app
     build:
       context: .
       dockerfile: ./Dockerfile
     ports:
-      - 3000:3000
-      - 3001:3001
-      - 4000:4000
-      - 4001:4001
-      - 5000:5000
-      - 5001:5001
+      - 5173:5173
+      - 8787:8787
       - 9323:9323
     volumes:
       - ../:/home/aiots/dev
-      - ./bin/aiots-root:/sbin/aiots-root
+      - ./bin/root:/sbin/root
       - ./bin/aiots:/usr/local/bin/aiots
       - dummy:/home/aiots/dev/.pnpm-store
       - dummy:/home/aiots/dev/node_modules

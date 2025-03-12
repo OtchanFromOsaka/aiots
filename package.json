@@ -16,7 +16,7 @@
 	},
 	"engines": {
 		"node": ">=22",
-		"pnpm": ">=9",
+		"pnpm": ">=10",
 		"npm": "please use pnpm",
 		"yarn": "please use pnpm"
 	}

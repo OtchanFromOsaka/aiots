@@ -6,3 +6,5 @@
 
 .pnpm-store/
 **/node_modules/
+**/dist/
+**/tests/e2e/reports/

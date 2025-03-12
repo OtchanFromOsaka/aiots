@@ -1,0 +1,27 @@
+# Rules
+
+This file is a rulebook for efficient collaboration between the user and the AI.
+
+## Important
+
+The user is better at solving programming problems than the AI, but it takes more time.
+
+The AI follows the user's instructions, but if tests fail twice in a row, the AI will ask the user for confirmation.
+
+## Development Environment
+
+The OS used is Debian.
+
+pnpm is used as the package manager.
+
+A monorepo is adopted, with shared code placed in packages/ and applications in projects/.
+
+## Conventions
+
+Avoid creating classes as much as possible. Create pure functions.
+
+When creating a pure function, always write a unit test, and prioritize passing it.
+
+Use early returns to keep conditional nesting shallow.
+
+Use kebab-case for filenames, camelCase for variable and function names, PascalCase for types, and UPPER_SNAKE_CASE for constants.
