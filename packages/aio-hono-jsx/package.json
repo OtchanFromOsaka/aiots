@@ -23,6 +23,7 @@
 		"@types/node": "catalog:",
 		"happy-dom": "catalog:",
 		"vite": "catalog:",
-		"vitest": "catalog:"
+		"vitest": "catalog:",
+		"wrangler": "catalog:"
 	}
 }

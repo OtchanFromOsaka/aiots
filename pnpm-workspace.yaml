@@ -31,4 +31,5 @@ catalog:
   vue: latest
   vue-router: latest
   vue-tsc: latest
+  wrangler: latest
   zod: latest
