@@ -4,6 +4,7 @@ packages:
 
 catalog:
   "@biomejs/biome": latest
+  "@cloudflare/workers-types": latest
   "@hono/node-server": latest
   "@hono/vite-build": latest
   "@hono/vite-dev-server": latest

@@ -4,8 +4,9 @@
 	"version": "0.1.0",
 	"type": "module",
 	"scripts": {
-		"aio-http": "pnpm -F \"aio-http\"",
 		"aio-date": "pnpm -F \"aio-date\"",
+		"aio-hono-jsx": "pnpm -F \"aio-hono-jsx\"",
+		"aio-http": "pnpm -F \"aio-http\"",
 		"aio-math": "pnpm -F \"aio-math\"",
 		"aio-ui-react": "pnpm -F \"aio-ui-react\"",
 		"aio-ui-vue": "pnpm -F \"aio-ui-vue\"",
