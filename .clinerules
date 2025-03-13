@@ -16,6 +16,18 @@ pnpm is used as the package manager.
 
 A monorepo is adopted, with shared code placed in packages/ and applications in projects/.
 
+To run commands for specific packages or projects, use the shortcut commands defined in the root package.json:
+
+```bash
+pnpm <package-name/project-name> <command>
+```
+
+For example, to run the dev command for aio-hono-jsx:
+
+```bash
+pnpm aio-hono-jsx dev
+```
+
 ## Conventions
 
 Avoid creating classes as much as possible. Create pure functions.
@@ -25,3 +37,5 @@ When creating a pure function, always write a unit test, and prioritize passing 
 Use early returns to keep conditional nesting shallow.
 
 Use kebab-case for filenames, camelCase for variable and function names, PascalCase for types, and UPPER_SNAKE_CASE for constants.
+
+The repository uses Biome.js for linting and formatting. Code should pass Biome.js default settings for linting and formatting.
