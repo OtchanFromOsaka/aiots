@@ -1,6 +1,6 @@
 import { useState } from "hono/jsx";
 
-// import { AioIconSun, AioIconMoon } from "@/components/icon";
+import { AioIconSun, AioIconMoon } from "@/components/icon";
 import AioToggleSwitch from "@/components/aio-toggle-switch";
 import { isClient, isServer } from "@/utils/window";
 import type { Theme } from "@/types";
@@ -46,6 +46,8 @@ export default function ThemeToggleSwitch() {
 			thumbSize={20}
 			thumbColor="#fff"
 			transitionSeconds={0.3}
-		/>
+		>
+			{theme === "dark" ? <AioIconMoon /> : <AioIconSun />}
+		</AioToggleSwitch>
 	) : null;
 }

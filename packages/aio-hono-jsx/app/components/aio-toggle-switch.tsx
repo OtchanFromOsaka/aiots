@@ -1,18 +1,19 @@
-import type { FC } from "hono/jsx";
+import type { FC, PropsWithChildren } from "hono/jsx";
 
 interface AioToggleSwitchProps {
-	isChecked?: boolean | null;
-	onChange?: (isChecked: boolean) => void;
-	height?: number;
-	width?: number;
-	backgroundColor?: string;
-	checkedBackgroundColor?: string;
-	thumbSize?: number;
-	thumbColor?: string;
-	transitionSeconds?: number;
-	id?: string;
-	name?: string;
-	disabled?: boolean;
+  isChecked?: boolean | null;
+  onChange?: (isChecked: boolean) => void;
+  height?: number;
+  width?: number;
+  backgroundColor?: string;
+  checkedBackgroundColor?: string;
+  thumbSize?: number;
+  thumbColor?: string;
+  transitionSeconds?: number;
+  id?: string;
+  name?: string;
+  disabled?: boolean;
+  children?: any;
 }
 
 const AioToggleSwitch: FC<AioToggleSwitchProps> = ({
@@ -28,6 +29,7 @@ const AioToggleSwitch: FC<AioToggleSwitchProps> = ({
 	id,
 	name,
 	disabled = false,
+	children,
 }) => {
 	const handleChange = (e: Event) => {
 		const target = e.target as HTMLInputElement;
@@ -82,6 +84,9 @@ const AioToggleSwitch: FC<AioToggleSwitchProps> = ({
 		borderRadius: "50%",
 		transition: `left ${transitionSeconds}s`,
 		boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
 	};
 
 	return (
@@ -96,7 +101,9 @@ const AioToggleSwitch: FC<AioToggleSwitchProps> = ({
 				disabled={disabled}
 			/>
 			<span style={sliderStyle}>
-				<span style={thumbStyle} />
+				<span style={thumbStyle}>
+					{children}
+				</span>
 			</span>
 		</label>
 	);
