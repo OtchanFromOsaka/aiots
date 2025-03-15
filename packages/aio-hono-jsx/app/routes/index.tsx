@@ -18,7 +18,7 @@ export default createRoute(async (c) => {
 				</div>
 			</main>
 		</>
-	)
+	);
 
 	const head = { title: "AIO-UI" };
 

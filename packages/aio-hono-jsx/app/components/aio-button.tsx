@@ -15,10 +15,7 @@ const AioButton: FC<PropsWithChildren<AioButtonProps>> = ({
 	};
 
 	return (
-		<button
-			type={type}
-			onClick={handleClick}
-		>
+		<button type={type} onClick={handleClick}>
 			{children}
 		</button>
 	);
