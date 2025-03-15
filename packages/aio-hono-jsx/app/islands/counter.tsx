@@ -1,6 +1,6 @@
 import { useState } from "hono/jsx";
 
-import { AioButton } from "@/components/aio-button";
+import AioButton from "@/components/aio-button";
 
 export default function Counter() {
 	const [count, setCount] = useState(0);

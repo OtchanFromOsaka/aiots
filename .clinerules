@@ -39,3 +39,57 @@ Use early returns to keep conditional nesting shallow.
 Use kebab-case for filenames, camelCase for variable and function names, PascalCase for types, and UPPER_SNAKE_CASE for constants.
 
 The repository uses Biome.js for linting and formatting. Code should pass Biome.js default settings for linting and formatting.
+
+## packages/aio-hono-jsx Library
+
+### Important Note
+When making changes to the aio-hono-jsx library (adding new components, modifying existing ones, etc.), always update this .clinerules file to reflect those changes. This ensures documentation stays in sync with the codebase.
+
+### Overview
+The aio-hono-jsx library is a UI component library built with Hono and HonoX frameworks. It's designed to work with Cloudflare Workers and uses JSX for component definition.
+
+### Project Structure
+- `/app`: Main application code
+  - `/components`: Reusable UI components (AioToggleSwitch, etc.)
+  - `/islands`: Interactive components with client-side functionality (Counter, ThemeToggleSwitch)
+  - `/routes`: Page routes defined using HonoX's createRoute
+  - `/types`: TypeScript type definitions
+  - `/utils`: Utility functions
+  - `client.ts`: Client-side entry point
+  - `server.ts`: Server-side entry point
+  - `style.css`: Global CSS styles
+  - `theme.ts`: Theme management
+
+### Key Components
+1. **AioToggleSwitch**: A customizable toggle switch component with the following features:
+   - Supports checked, unchecked, and indeterminate states
+   - Customizable colors, sizes, and transition speed
+   - Supports disabled state
+   - Callback for change events
+
+2. **AioButton**: A basic button component with the following features:
+   - Supports different button types (button, submit, reset)
+   - Handles click events
+   - Accepts children for button content
+
+### Theming
+- Supports light and dark themes
+- Uses CSS variables for theme colors
+- Theme can be toggled using ThemeToggleSwitch component
+- Automatically detects user's preferred color scheme
+- Persists theme preference in localStorage
+
+### Build and Deployment
+- Uses Vite for development and building
+- Configured for deployment to Cloudflare Workers
+- Development server uses @hono/vite-dev-server/cloudflare adapter
+- Build process uses @hono/vite-build/cloudflare-workers
+
+### Development Commands
+- `dev`: Start development server
+- `biome`: Run Biome linting and formatting
+- `test`: Run Vitest tests
+- `e2e`: Run Playwright end-to-end tests
+- `build`: Build for production
+- `preview`: Preview using Wrangler
+- `deploy`: Build and deploy to Cloudflare Workers
