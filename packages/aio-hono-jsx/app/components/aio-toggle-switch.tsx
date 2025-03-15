@@ -1,28 +1,27 @@
 import type { FC, PropsWithChildren } from "hono/jsx";
 
-interface AioToggleSwitchProps {
-  isChecked?: boolean | null;
-  onChange?: (isChecked: boolean) => void;
-  height?: number;
-  width?: number;
-  backgroundColor?: string;
-  checkedBackgroundColor?: string;
-  thumbSize?: number;
-  thumbColor?: string;
-  transitionSeconds?: number;
-  id?: string;
-  name?: string;
-  disabled?: boolean;
-  children?: any;
+interface AioToggleSwitchProps extends PropsWithChildren {
+	isChecked?: boolean | null;
+	onChange?: (isChecked: boolean) => void;
+	height?: number;
+	width?: number;
+	backgroundColor?: string;
+	checkedBackgroundColor?: string;
+	thumbSize?: number;
+	thumbColor?: string;
+	transitionSeconds?: number;
+	id?: string;
+	name?: string;
+	disabled?: boolean;
 }
 
-const AioToggleSwitch: FC<AioToggleSwitchProps> = ({
+export const AioToggleSwitch: FC<AioToggleSwitchProps> = ({
 	isChecked = false,
 	onChange,
 	height = 24,
 	width = 48,
-	backgroundColor = "#ccc",
-	checkedBackgroundColor = "#2196F3",
+	backgroundColor = "#bfbfbf",
+	checkedBackgroundColor = "#00ff00",
 	thumbSize = 20,
 	thumbColor = "#fff",
 	transitionSeconds = 0.3,
@@ -101,12 +100,8 @@ const AioToggleSwitch: FC<AioToggleSwitchProps> = ({
 				disabled={disabled}
 			/>
 			<span style={sliderStyle}>
-				<span style={thumbStyle}>
-					{children}
-				</span>
+				<span style={thumbStyle}>{children}</span>
 			</span>
 		</label>
 	);
 };
-
-export default AioToggleSwitch;

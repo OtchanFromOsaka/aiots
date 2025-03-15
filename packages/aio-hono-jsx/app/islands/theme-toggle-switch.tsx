@@ -1,11 +1,11 @@
 import { useState } from "hono/jsx";
 
 import { AioIconSun, AioIconMoon } from "@/components/icon";
-import AioToggleSwitch from "@/components/aio-toggle-switch";
+import { AioToggleSwitch } from "@/components/aio-toggle-switch";
 import { isClient, isServer } from "@/utils/window";
 import type { Theme } from "@/types";
 
-export default function ThemeToggleSwitch() {
+export const ThemeToggleSwitch = () => {
 	const [theme, setTheme] = useState<Theme>(() => {
 		if (isServer()) return null;
 
@@ -39,15 +39,14 @@ export default function ThemeToggleSwitch() {
 		<AioToggleSwitch
 			isChecked={theme === "dark"}
 			onChange={toggleTheme}
-			height={24}
-			width={48}
-			backgroundColor="#ccc"
-			checkedBackgroundColor="#2196F3"
-			thumbSize={20}
-			thumbColor="#fff"
-			transitionSeconds={0.3}
+			checkedBackgroundColor="#bfbfbf"
+			thumbColor={theme === "dark" ? "#3f7fff" : "#ff7f00"}
 		>
-			{theme === "dark" ? <AioIconMoon /> : <AioIconSun />}
+			{theme === "dark" ? (
+				<AioIconMoon size={16} color="#ffffffbf" />
+			) : (
+				<AioIconSun size={14} color="#ffffffbf" />
+			)}
 		</AioToggleSwitch>
 	) : null;
-}
+};

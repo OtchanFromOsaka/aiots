@@ -5,7 +5,7 @@ interface AioButtonProps {
 	onClick?: () => void;
 }
 
-const AioButton: FC<PropsWithChildren<AioButtonProps>> = ({
+export const AioButton: FC<PropsWithChildren<AioButtonProps>> = ({
 	type = "button",
 	onClick,
 	children,
@@ -20,5 +20,3 @@ const AioButton: FC<PropsWithChildren<AioButtonProps>> = ({
 		</button>
 	);
 };
-
-export default AioButton;

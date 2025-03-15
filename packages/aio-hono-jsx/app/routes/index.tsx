@@ -1,7 +1,7 @@
 import { createRoute } from "honox/factory";
 
-import Counter from "@/islands/counter";
-import ThemeToggleSwitch from "@/islands/theme-toggle-switch";
+import { Counter } from "@/islands/counter";
+import { ThemeToggleSwitch } from "@/islands/theme-toggle-switch";
 
 export default createRoute(async (c) => {
 	const content = (
