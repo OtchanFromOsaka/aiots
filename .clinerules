@@ -83,7 +83,15 @@ The aio-hono-jsx library is a UI component library built with Hono and HonoX fra
     - Accepts children for additional content (actions, navigation, etc.)
     - Responsive design with flexible layout
 
-4. **ThemeToggleSwitch**: A specialized toggle switch for theme switching with the following features:
+4. **AioSideNav**: A customizable side navigation component with the following features:
+    - Can be positioned on the left or right side of the screen
+    - Can be shown or hidden based on the visible prop
+    - Optional overlay mode that dims the rest of the page when the nav is visible
+    - Customizable width
+    - Accepts children for navigation content
+    - Smooth transition animations
+
+5. **ThemeToggleSwitch**: A specialized toggle switch for theme switching with the following features:
     - Automatically detects and applies user's preferred color scheme
     - Persists theme preference in localStorage
     - Displays a sun icon in light mode with orange background
