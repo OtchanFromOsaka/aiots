@@ -1,20 +1,18 @@
 import { createRoute } from "honox/factory";
 
+import { AioAppBar } from "@/components/aio-app-bar";
 import { Counter } from "@/islands/counter";
 import { ThemeToggleSwitch } from "@/islands/theme-toggle-switch";
 
 export default createRoute(async (c) => {
 	const content = (
 		<>
-			<header>
-				<h1>AIO-UI</h1>
-			</header>
-			<main>
+			<AioAppBar title="AIO-UI">
+				<ThemeToggleSwitch />
+			</AioAppBar>
+			<main style={{ marginTop: "80px", padding: "16px" }}>
 				<div>
 					<Counter />
-				</div>
-				<div>
-					<ThemeToggleSwitch />
 				</div>
 			</main>
 		</>

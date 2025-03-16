@@ -75,7 +75,15 @@ The aio-hono-jsx library is a UI component library built with Hono and HonoX fra
     - Callback for change events
     - Accepts children elements to be displayed in the thumb
 
-3. **ThemeToggleSwitch**: A specialized toggle switch for theme switching with the following features:
+3. **AioAppBar**: A customizable application bar component with the following features:
+    - Displays a title with proper styling
+    - Customizable height, background color, and text color
+    - Supports different positioning options (fixed, static, sticky, absolute, relative)
+    - Adjustable elevation (shadow)
+    - Accepts children for additional content (actions, navigation, etc.)
+    - Responsive design with flexible layout
+
+4. **ThemeToggleSwitch**: A specialized toggle switch for theme switching with the following features:
     - Automatically detects and applies user's preferred color scheme
     - Persists theme preference in localStorage
     - Displays a sun icon in light mode with orange background
