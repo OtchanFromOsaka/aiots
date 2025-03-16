@@ -23,7 +23,7 @@ if [ $1 = "setup" ]; then
   pnpm exec playwright install-deps
   chown -R aiots:aiots /home/aiots/dev
   chown -R aiots:aiots /usr/local/bin/aiots
-  chmod 744 /sbin/aiots-root
+  chmod 744 /sbin/root
   chmod 744 /usr/local/bin/aiots
 fi
 
@@ -38,7 +38,7 @@ if [ $1 = "update" ]; then
   pnpm exec playwright install-deps
   chown -R aiots:aiots /home/aiots/dev
   chown -R aiots:aiots /usr/local/bin/aiots
-  chmod 744 /sbin/aiots-root
+  chmod 744 /sbin/root
   chmod 744 /usr/local/bin/aiots
 fi
 
