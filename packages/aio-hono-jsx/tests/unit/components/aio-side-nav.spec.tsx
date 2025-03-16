@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { AioSideNav } from "../../../app/components/aio-side-nav";
+import { AioSideNav } from "@/components/aio-side-nav";
 
 describe("AioSideNav", () => {
 	it("should be defined", () => {

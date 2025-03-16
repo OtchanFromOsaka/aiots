@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { AioAppBar } from "../../../app/components/aio-app-bar";
+import { AioAppBar } from "@/components/aio-app-bar";
 
 describe("AioAppBar", () => {
 	it("should be defined", () => {

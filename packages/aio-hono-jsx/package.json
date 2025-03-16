@@ -20,6 +20,7 @@
 		"@hono/vite-build": "catalog:",
 		"@hono/vite-dev-server": "catalog:",
 		"@playwright/test": "catalog:",
+		"@testing-library/react": "catalog:",
 		"@types/node": "catalog:",
 		"happy-dom": "catalog:",
 		"vite": "catalog:",

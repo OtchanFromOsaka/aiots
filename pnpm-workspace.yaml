@@ -11,6 +11,7 @@ catalog:
   "@hono/zod-validator": latest
   "@nuxt/test-utils": latest
   "@playwright/test": latest
+  "@testing-library/react": latest
   "@types/node": latest
   "@types/react": latest
   "@types/react-dom": latest
