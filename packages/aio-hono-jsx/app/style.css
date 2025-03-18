@@ -4,7 +4,6 @@
 	margin: 0;
 	padding: 0;
 }
-
 :root {
 	--bg-color: #ffffff;
 	--text-color: #333333;
@@ -13,7 +12,6 @@
 	--border-color: #e0e0e0;
 	--shadow-color: rgba(0, 0, 0, 0.1);
 }
-
 .dark {
 	--bg-color: #121212;
 	--text-color: #e0e0e0;
@@ -22,52 +20,36 @@
 	--border-color: #444444;
 	--shadow-color: rgba(0, 0, 0, 0.3);
 }
-
 html {
 	background-color: var(--bg-color);
 	color: var(--text-color);
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* AioButton styles */
 .aio-button {
-	outline: none;
-	user-select: none;
-	text-decoration: none;
+	display: inline-flex;
 	position: relative;
-	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	font-weight: 500;
+	color: #efefef;
+	background-color: #7f7f7f;
+	border: 1px solid #7f7f7f;
+	box-shadow: 0 2px 4px var(--shadow-color);
+	transition: all 0.2s ease;
 }
-
 .aio-button:hover:not(.aio-button-disabled) {
 	opacity: 0.9;
 	transform: translateY(-1px);
 }
-
 .aio-button:active:not(.aio-button-disabled) {
 	opacity: 0.8;
 	transform: translateY(0);
 }
-
-.aio-button-text:hover:not(.aio-button-disabled),
-.aio-button-text:active:not(.aio-button-disabled) {
-	transform: none;
-	background-color: rgba(0, 0, 0, 0.05);
-}
-
-.dark .aio-button-text:hover:not(.aio-button-disabled),
-.dark .aio-button-text:active:not(.aio-button-disabled) {
-	background-color: rgba(255, 255, 255, 0.05);
-}
-
-.aio-button-outlined:hover:not(.aio-button-disabled) {
-	background-color: rgba(0, 0, 0, 0.05);
-}
-
-.dark .aio-button-outlined:hover:not(.aio-button-disabled) {
-	background-color: rgba(255, 255, 255, 0.05);
-}
-
-.aio-button-full-width {
-	display: block;
-	width: 100%;
+.aio-button-disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
 }
