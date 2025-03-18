@@ -24,18 +24,10 @@ export default createRoute(async (c) => {
 					</li>
 					<li style={{ marginBottom: "8px" }}>
 						<a
-							href="/about"
+							href="/button"
 							style={{ textDecoration: "none", color: "var(--text-color)" }}
 						>
-							About
-						</a>
-					</li>
-					<li style={{ marginBottom: "8px" }}>
-						<a
-							href="/contact"
-							style={{ textDecoration: "none", color: "var(--text-color)" }}
-						>
-							Contact
+							AioButton
 						</a>
 					</li>
 				</ul>
@@ -44,99 +36,6 @@ export default createRoute(async (c) => {
 				<div>
 					<Counter />
 				</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
-				<div>test</div>
 			</main>
 		</>
 	);
