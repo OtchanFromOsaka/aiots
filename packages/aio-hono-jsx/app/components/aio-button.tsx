@@ -18,22 +18,24 @@ export const AioButton: FC<AioButtonProps> = ({
 		if (onClick && !disabled) onClick();
 	};
 
-	const baseStyle = {
+	const style = {
 		cursor: disabled ? "not-allowed" : "pointer",
 		opacity: disabled ? "0.6" : "1",
 	};
 
-	const buttonClassName = `aio-button${disabled ? " aio-button-disabled" : ""}${
-		className ? ` ${className}` : ""
-	}`;
+	const fullClassName = `
+		aio-button
+		${disabled ? " aio-button-disabled" : ""}
+		${className ? ` ${className}` : ""}
+	`;
 
 	return (
 		<button
 			type={type}
 			onClick={handleClick}
 			disabled={disabled}
-			style={baseStyle}
-			className={buttonClassName}
+			style={style}
+			className={fullClassName}
 		>
 			{children}
 		</button>
