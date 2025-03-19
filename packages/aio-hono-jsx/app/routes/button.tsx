@@ -1,41 +1,10 @@
 import { createRoute } from "honox/factory";
 
-import { AioAppBar } from "@/components/aio-app-bar";
-import { AioSideNav } from "@/components/aio-side-nav";
 import { AioButton } from "@/components/aio-button";
-import { ThemeToggleSwitch } from "@/islands/theme-toggle-switch";
 
 export default createRoute(async (c) => {
 	const content = (
 		<>
-			<AioAppBar title="AioButton Component">
-				<ThemeToggleSwitch />
-			</AioAppBar>
-			<AioSideNav>
-				<h2>Navigation</h2>
-				<ul style={{ listStyle: "none", padding: "0", marginTop: "16px" }}>
-					<li style={{ marginBottom: "8px" }}>
-						<a
-							href="/"
-							style={{ textDecoration: "none", color: "var(--text-color)" }}
-						>
-							Home
-						</a>
-					</li>
-					<li style={{ marginBottom: "8px" }}>
-						<a
-							href="/button"
-							style={{
-								textDecoration: "none",
-								color: "var(--primary-color)",
-								fontWeight: "bold",
-							}}
-						>
-							AioButton
-						</a>
-					</li>
-				</ul>
-			</AioSideNav>
 			<main style={{ marginTop: "80px", marginLeft: "266px", padding: "16px" }}>
 				<h1>AioButton Component</h1>
 				<p style={{ marginBottom: "24px" }}>

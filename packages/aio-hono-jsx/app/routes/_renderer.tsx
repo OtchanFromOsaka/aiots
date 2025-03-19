@@ -2,6 +2,17 @@ import { Style } from "hono/css";
 import { jsxRenderer } from "hono/jsx-renderer";
 import { Script } from "honox/server";
 
+import { AioAppBar } from "@/components/aio-app-bar";
+import { ThemeToggleSwitch } from "@/islands/theme-toggle-switch";
+import { AioSideNav } from "@/components/aio-side-nav";
+
+const routes = [
+	{ path: "/button", name: "AioButton" },
+	{ path: "/button", name: "AioButton" },
+	{ path: "/button", name: "AioButton" },
+	{ path: "/button", name: "AioButton" },
+]
+
 export default jsxRenderer(({ children, title }) => {
 	return (
 		<html lang="en">
@@ -15,7 +26,22 @@ export default jsxRenderer(({ children, title }) => {
 				<Script src="/app/client.ts" async />
 				<Style />
 			</head>
-			<body>{children}</body>
+			<body>
+				<AioAppBar>
+					<h1>AIO-UI</h1>
+					<ThemeToggleSwitch />
+				</AioAppBar>
+				<AioSideNav>
+					<ul style={{ listStyle: "none", padding: "0", marginTop: "16px" }}>
+						{routes.map((route) => (
+							<li key={route.path}>
+								<a href={route.path}>{route.name}</a>
+							</li>
+						))}
+					</ul>
+				</AioSideNav>
+				{children}
+			</body>
 		</html>
 	);
 });

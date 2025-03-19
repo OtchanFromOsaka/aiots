@@ -53,3 +53,19 @@ html {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
+
+.aio-app-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: var(--bg-color);
+	box-shadow: 0 2px 4px var(--shadow-color);
+	z-index: 1000;
+}
+.aio-app-bar h1 {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
