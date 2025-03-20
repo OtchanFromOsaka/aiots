@@ -5,13 +5,14 @@ import { Script } from "honox/server";
 import { AioAppBar } from "@/components/aio-app-bar";
 import { ThemeToggleSwitch } from "@/islands/theme-toggle-switch";
 import { AioSideNav } from "@/components/aio-side-nav";
+import { AioMain } from "@/components/aio-main";
 
 const routes = [
 	{ path: "/button", name: "AioButton" },
 	{ path: "/button", name: "AioButton" },
 	{ path: "/button", name: "AioButton" },
 	{ path: "/button", name: "AioButton" },
-]
+];
 
 export default jsxRenderer(({ children, title }) => {
 	return (
@@ -31,8 +32,8 @@ export default jsxRenderer(({ children, title }) => {
 					<h1>AIO-UI</h1>
 					<ThemeToggleSwitch />
 				</AioAppBar>
-				<AioSideNav>
-					<ul style={{ listStyle: "none", padding: "0", marginTop: "16px" }}>
+				<AioSideNav className="aio-app-bar-spacer">
+					<ul>
 						{routes.map((route) => (
 							<li key={route.path}>
 								<a href={route.path}>{route.name}</a>
@@ -40,7 +41,9 @@ export default jsxRenderer(({ children, title }) => {
 						))}
 					</ul>
 				</AioSideNav>
-				{children}
+				<AioMain mainClassName="aio-app-bar-spacer aio-side-nav-spacer">
+					{children}
+				</AioMain>
 			</body>
 		</html>
 	);

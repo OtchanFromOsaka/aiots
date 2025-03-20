@@ -8,7 +8,6 @@ interface AioAppBarProps extends PropsWithChildren {
 
 export const AioAppBar: FC<AioAppBarProps> = ({
 	position = "fixed",
-	height = 64,
 	className = "",
 	children,
 }) => {
@@ -17,7 +16,6 @@ export const AioAppBar: FC<AioAppBarProps> = ({
 		top: position === "fixed" || position === "sticky" ? "0" : undefined,
 		left: position === "fixed" ? "0" : undefined,
 		right: position === "fixed" ? "0" : undefined,
-		height,
 	};
 
 	const fullClassName = `
@@ -26,11 +24,8 @@ export const AioAppBar: FC<AioAppBarProps> = ({
 	`;
 
 	return (
-		<>
-			<header style={style} className={fullClassName}>
-				{children}
-			</header>
-			<div style={{ height }}></div>
-		</>
+		<header style={style} className={fullClassName}>
+			{children}
+		</header>
 	);
 };
