@@ -1,0 +1,32 @@
+{
+	"name": "@aiots/aio-ui",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"biome": "biome lint --write && biome format --write",
+		"test": "vitest run",
+		"e2e": "playwright test",
+		"build": "vite build --mode client && vite build",
+		"preview": "wrangler dev",
+		"deploy": "pnpm build && wrangler deploy"
+	},
+	"dependencies": {
+		"hono": "catalog:",
+		"honox": "catalog:"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@cloudflare/workers-types": "catalog:",
+		"@hono/vite-build": "catalog:",
+		"@hono/vite-dev-server": "catalog:",
+		"@playwright/test": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+		"@testing-library/react": "catalog:",
+		"@types/node": "catalog:",
+		"happy-dom": "catalog:",
+    "tailwindcss": "catalog:",
+		"vite": "catalog:",
+		"vitest": "catalog:",
+		"wrangler": "catalog:"
+	}
+}

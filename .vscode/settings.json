@@ -3,6 +3,9 @@
 	"git.branchProtection": [
 		"main",
 	],
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
 	"files.encoding": "utf8",
 	"files.eol": "\n",
 	"files.insertFinalNewline": true,

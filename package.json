@@ -5,9 +5,9 @@
 	"type": "module",
 	"scripts": {
 		"aio-date": "pnpm -F \"aio-date\"",
-		"aio-hono-jsx": "pnpm -F \"aio-hono-jsx\"",
 		"aio-http": "pnpm -F \"aio-http\"",
 		"aio-math": "pnpm -F \"aio-math\"",
+		"aio-ui": "pnpm -F \"aio-ui\"",
 		"aio-ui-react": "pnpm -F \"aio-ui-react\"",
 		"aio-ui-vue": "pnpm -F \"aio-ui-vue\"",
 		"aio-validation": "pnpm -F \"aio-validation\"",

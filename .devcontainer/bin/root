@@ -33,8 +33,10 @@ if [ $1 = "update" ]; then
   apt-get full-upgrade -y
   apt-get autoremove -y
   apt-get autoclean -y
+  npm install -g pnpm
+  npm install -g n
+  npm install -g @playwright/test
   n 22
-  pnpm self-update
   pnpm exec playwright install-deps
   chown -R aiots:aiots /home/aiots/dev
   chown -R aiots:aiots /usr/local/bin/aiots

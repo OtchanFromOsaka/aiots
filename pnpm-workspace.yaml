@@ -11,6 +11,7 @@ catalog:
   "@hono/zod-validator": latest
   "@nuxt/test-utils": latest
   "@playwright/test": latest
+  "@tailwindcss/vite": latest
   "@testing-library/react": latest
   "@types/node": latest
   "@types/react": latest
@@ -26,6 +27,7 @@ catalog:
   react-dom: latest
   react-router-dom: latest
   styled-components: latest
+  tailwindcss: latest
   typescript: latest
   vite: latest
   vitest: latest
